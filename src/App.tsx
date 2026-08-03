@@ -14,10 +14,15 @@ import WhyItMatters from './pages/WhyItMatters';
 import Approach from './pages/Approach';
 import Join from './pages/Join';
 import WhoWeServe from './pages/WhoWeServe';
+import Rithvik from './pages/Rithvik';
 import Impact from './pages/Impact';
 import Science from './pages/Science';
 import Athletics from './pages/Athletics';
 import Support from './pages/Support';
+import Contact from './pages/Contact';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Refund from './pages/Refund';
 
 function App() {
   return (
@@ -44,10 +49,15 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/support" element={<Support />} />
             <Route path="/who-we-serve" element={<WhoWeServe />} />
+            <Route path="/rithvik" element={<Rithvik />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/science" element={<Science />} />
             <Route path="/marathon" element={<Athletics />} />
             <Route path="/athletics" element={<Athletics />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/refund-policy" element={<Refund />} />
             {/* Fallback back to Impact */}
             <Route path="*" element={<Impact />} />
           </Routes>

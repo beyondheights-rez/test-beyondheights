@@ -94,73 +94,73 @@ const Donate: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 px-6 md:px-12 bg-brand-bg text-brand-ink min-h-screen">
-      <div className="max-w-[1600px] mx-auto space-y-16">
+    <div className="pt-24 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-6 md:px-12 bg-brand-bg text-brand-ink min-h-screen">
+      <div className="max-w-[1600px] mx-auto space-y-10 sm:space-y-16">
 
         {/* --- Hero / Header Section --- */}
-        <header className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 md:gap-16">
-          <div className="flex-1 space-y-4">
+        <header className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 md:gap-16">
+          <div className="flex-1 space-y-3 sm:space-y-4">
             <div className="font-mono text-xs tracking-[0.1em] text-[#0d47a1] uppercase font-bold flex items-center gap-3">
               <span className="w-8 h-0.5 bg-[#0d47a1]" />
               MAKE A DIFFERENCE
             </div>
-            <h1 className="font-serif text-[36px] md:text-[44px] lg:text-[52px] font-normal leading-[1.15] text-brand-ink max-w-[600px]">
+            <h1 className="font-serif text-3xl sm:text-[44px] lg:text-[52px] font-normal leading-[1.15] text-brand-ink max-w-[600px]">
               Your support builds the future of understanding.
             </h1>
-            <p className="text-[15px] md:text-base text-brand-ink-soft max-w-[500px]">
+            <p className="text-xs sm:text-[15px] md:text-base text-brand-ink-soft max-w-[500px]">
               You are not funding a program.<br />You are building the scientific infrastructure<br />for understanding autistic minds.
             </p>
           </div>
 
           {/* Progress Tracker */}
-          <div className="relative flex items-center justify-between w-full lg:max-w-[800px] pb-4">
+          <div className="relative flex items-center justify-between w-full lg:max-w-[800px] pb-2 sm:pb-4 overflow-x-auto no-scrollbar gap-2 sm:gap-0">
             {/* Dashed Line */}
-            <div className="absolute top-[18px] left-[50px] right-[50px] h-[1px] border-t border-dashed border-slate-200 z-0" />
+            <div className="absolute top-[18px] left-[40px] right-[40px] h-[1px] border-t border-dashed border-slate-200 z-0 hidden sm:block" />
             
-            <div className="flex flex-col items-center relative z-10 shrink-0">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
+            <div className="flex flex-col items-center relative z-10 shrink-0 min-w-[70px] sm:min-w-0">
+              <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
                 currentStep >= 1 ? 'bg-[#0d47a1] border-[#0d47a1] text-white' : 'bg-white border-slate-200 text-slate-400'
               }`}>
                 1
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0d47a1] mt-2">Impact</span>
-              <span className="text-xs text-slate-500">Choose value</span>
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#0d47a1] mt-1.5 sm:mt-2">Impact</span>
+              <span className="text-[10px] sm:text-xs text-slate-500 hidden sm:inline">Choose value</span>
             </div>
 
-            <div className="flex flex-col items-center relative z-10 shrink-0">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
+            <div className="flex flex-col items-center relative z-10 shrink-0 min-w-[70px] sm:min-w-0">
+              <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
                 currentStep >= 2 ? 'bg-[#0d47a1] border-[#0d47a1] text-white' : 'bg-white border-slate-200 text-slate-400'
               }`}>
                 2
               </div>
-              <span className={`text-xs font-bold uppercase tracking-wider mt-2 ${currentStep >= 2 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
+              <span className={`text-[10px] sm:text-xs font-bold uppercase tracking-wider mt-1.5 sm:mt-2 ${currentStep >= 2 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
                 Details
               </span>
-              <span className="text-xs text-slate-500">Tell us about you</span>
+              <span className="text-[10px] sm:text-xs text-slate-500 hidden sm:inline">Tell us about you</span>
             </div>
 
-            <div className="flex flex-col items-center relative z-10 shrink-0">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
+            <div className="flex flex-col items-center relative z-10 shrink-0 min-w-[70px] sm:min-w-0">
+              <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
                 currentStep >= 3 ? 'bg-[#0d47a1] border-[#0d47a1] text-white' : 'bg-white border-slate-200 text-slate-400'
               }`}>
                 3
               </div>
-              <span className={`text-xs font-bold uppercase tracking-wider mt-2 ${currentStep >= 3 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
+              <span className={`text-[10px] sm:text-xs font-bold uppercase tracking-wider mt-1.5 sm:mt-2 ${currentStep >= 3 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
                 Payment
               </span>
-              <span className="text-xs text-slate-500">Secure gateways</span>
+              <span className="text-[10px] sm:text-xs text-slate-500 hidden sm:inline">Secure gateways</span>
             </div>
 
-            <div className="flex flex-col items-center relative z-10 shrink-0">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
+            <div className="flex flex-col items-center relative z-10 shrink-0 min-w-[70px] sm:min-w-0">
+              <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-bold text-xs border transition-colors ${
                 currentStep >= 4 ? 'bg-[#0d47a1] border-[#0d47a1] text-white' : 'bg-white border-slate-200 text-slate-400'
               }`}>
                 4
               </div>
-              <span className={`text-xs font-bold uppercase tracking-wider mt-2 ${currentStep >= 4 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
+              <span className={`text-[10px] sm:text-xs font-bold uppercase tracking-wider mt-1.5 sm:mt-2 ${currentStep >= 4 ? 'text-[#0d47a1]' : 'text-slate-500'}`}>
                 Receipt
               </span>
-              <span className="text-xs text-slate-500">Thank you</span>
+              <span className="text-[10px] sm:text-xs text-slate-500 hidden sm:inline">Thank you</span>
             </div>
           </div>
         </header>

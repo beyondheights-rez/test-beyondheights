@@ -14,9 +14,10 @@ const Header: React.FC = () => {
     { name: 'OUR APPROACH', href: '#approach' },
     { name: 'THE SCIENCE', href: '#science' },
     { name: 'WHO WE SERVE', href: '#autism' },
+    { name: 'RITHVIK', href: '#rithvik' },
     { name: 'MARATHON', href: '#marathon' },
     { name: 'JOIN US', href: '#join' },
-    { name: 'SUPPORT US', href: '#support' },
+    // { name: 'SUPPORT US', href: '#support' },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -127,6 +128,11 @@ const Header: React.FC = () => {
       return;
     }
 
+    if (targetId === 'rithvik') {
+      navigate('/rithvik');
+      return;
+    }
+
     if (targetId === 'marathon') {
       navigate('/marathon');
       return;
@@ -203,6 +209,7 @@ const Header: React.FC = () => {
               (id === 'approach' && location.pathname === '/our-approach') ||
               (id === 'science' && location.pathname === '/science') ||
               (id === 'autism' && location.pathname === '/who-we-serve') ||
+              (id === 'rithvik' && location.pathname === '/rithvik') ||
               (id === 'marathon' && location.pathname === '/marathon') ||
               (id === 'join' && location.pathname === '/join') ||
               (id === 'support' && location.pathname === '/support') ||
@@ -283,6 +290,7 @@ const Header: React.FC = () => {
               (id === 'approach' && location.pathname === '/our-approach') ||
               (id === 'science' && location.pathname === '/science') ||
               (id === 'autism' && location.pathname === '/who-we-serve') ||
+              (id === 'rithvik' && location.pathname === '/rithvik') ||
               (id === 'marathon' && location.pathname === '/marathon') ||
               (id === 'join' && location.pathname === '/join') ||
               (id === 'support' && location.pathname === '/support') ||
