@@ -720,9 +720,9 @@ function CollectionsContent() {
   const searchParams = useSearchParams();
 
   const filterParam =
-    searchParams.get("filter") ||
-    searchParams.get("c") ||
-    searchParams.get("collection");
+    searchParams?.get("filter") ||
+    searchParams?.get("c") ||
+    searchParams?.get("collection");
 
   const [selectedFilterOverride, setSelectedFilterOverride] = useState<
     string | null

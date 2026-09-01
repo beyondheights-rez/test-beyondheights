@@ -1219,12 +1219,12 @@ function ShopContent({
 
   // Search & Category Tab States
   const [searchQuery, setSearchQuery] = useState(() => {
-    return searchParams.get("q") || searchParams.get("search") || "";
+    return searchParams?.get("q") || searchParams?.get("search") || "";
   });
   const [selectedTab, setSelectedTab] = useState<
     "ALL PRODUCTS" | "APPAREL" | "ACCESSORIES" | "OBJECTS"
   >(() => {
-    const cat = searchParams.get("cat") || searchParams.get("category");
+    const cat = searchParams?.get("cat") || searchParams?.get("category");
     if (cat) {
       const upperCat = cat.toUpperCase();
       if (upperCat === "APPAREL") return "APPAREL";
@@ -1246,7 +1246,7 @@ function ShopContent({
 
   // Filter Selection States
   const [selectedGender, setSelectedGender] = useState<string>(() => {
-    const gender = searchParams.get("gender");
+    const gender = searchParams?.get("gender");
     if (gender) {
       const g = gender.toUpperCase();
       if (g === "MEN" || g === "WOMEN" || g === "UNISEX") return g;
@@ -1254,7 +1254,7 @@ function ShopContent({
     return "ALL";
   });
   const [selectedProductType, setSelectedProductType] = useState<string>(() => {
-    const sub = searchParams.get("sub") || searchParams.get("product");
+    const sub = searchParams?.get("sub") || searchParams?.get("product");
     if (sub) {
       const matchSub = PRODUCT_TYPES.find(
         (pt) => pt.toUpperCase() === sub.toUpperCase()
@@ -1269,13 +1269,13 @@ function ShopContent({
   });
   const [selectedSize, setSelectedSize] = useState<string>("ALL");
   const [selectedColor, setSelectedColor] = useState<string>(() => {
-    return searchParams.get("color")?.toUpperCase() || "ALL";
+    return searchParams?.get("color")?.toUpperCase() || "ALL";
   });
   const [selectedPrice, setSelectedPrice] = useState<string>(() => {
-    return searchParams.get("price") || "ALL";
+    return searchParams?.get("price") || "ALL";
   });
   const [selectedSort, setSelectedSort] = useState<string>(() => {
-    return searchParams.get("sort")?.toUpperCase() || "FEATURED";
+    return searchParams?.get("sort")?.toUpperCase() || "FEATURED";
   });
 
   // Close other dropdowns when one opens
@@ -1952,7 +1952,7 @@ function ShopWrapper() {
   const searchParams = useSearchParams();
   return (
     <ShopContent
-      key={searchParams.toString()}
+      key={searchParams?.toString() ?? ""}
       searchParams={searchParams}
     />
   );
