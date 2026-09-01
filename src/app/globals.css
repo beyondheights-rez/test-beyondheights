@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800;900&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bone: #F1ECE4;
+  --color-bone-light: #F7F4EF;
+  --color-bone-dark: #E4DCD0;
+  --color-beyond-black: #111111;
+  --color-beyond-gold: #B59A63;
+  --color-beyond-gold-light: #C9B27E;
+  --color-beyond-gold-dark: #8F7643;
+  --color-beyond-muted: #444444;
+  --color-beyond-subtle: #777777;
+  --color-beyond-border: rgba(17, 17, 17, 0.0823529);
+  --color-beyond-border-dark: rgba(241, 236, 228, 0.12549);
+
+  --font-display: 'Big Shoulders Display', sans-serif;
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+}
+
+:root {
+  --background: #F1ECE4;
+  --foreground: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F1ECE4;
+}
+
+body {
+  background-color: #F1ECE4;
+  color: #111111;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Typography Utilities */
+.font-display {
+  font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Figma Section Base Rules */
+.beyond-border {
+  border-color: rgba(17, 17, 17, 0.0823529);
+}
+
+.beyond-border-dark {
+  border-color: rgba(241, 236, 228, 0.12549);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1ECE4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B59A63;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F7643;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #111111;
+  color: #F1ECE4;
+}
